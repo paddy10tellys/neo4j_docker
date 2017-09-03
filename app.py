@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Flask inside Docker!!"
+    return "Flask inside Docker but app name changed from simple-flask-app to endovelicus-app!!"
 
 
 if __name__ == "__main__":
