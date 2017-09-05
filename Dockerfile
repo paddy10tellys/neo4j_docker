@@ -7,7 +7,7 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 RUN pip install virtualenvwrapper
-RUN source virtualenvwrapper.sh
+RUN . virtualenvwrapper.sh
 RUN mkvirtualenv -- venv
 RUN lsvirtualenv
 RUN export WORKON_HOME=$HOME/.virtualenvs
