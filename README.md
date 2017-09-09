@@ -3,18 +3,18 @@
 Build the image using the following command
 
 ```bash
-$ docker build -t endovelicus-app:latest .
+$ docker build -t neo4j_docker:latest .
 ```
 
 Run the Docker container using the command shown below.
 
 ```bash
-$ docker run -d -p 5000:5000 endovelicus-app
+$ docker run -d -p 5000:5000 neo4j_docker
 ```
 Alternatively, build from remote repo using
 
 ```bash
-$ docker build https://github.com/paddy10tellys/endovelicus.git 
+$ docker build https://github.com/paddy10tellys/neo4j_docker.git 
 ```
 
 Run the Docker container using the command shown below.
