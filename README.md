@@ -1,4 +1,4 @@
-# Simple Python Flask Dockerized Application#
+# Simple Neo4j Dockerized Application#
 
 Build the image using the following command
 
@@ -21,7 +21,23 @@ Run the Docker container using the command shown below.
 
 ```bash
 $ docker run -d -p 5000:5000 <container ID>
+
+docker run  
+        -p 7474:7474 \
+        -p 7687:7687 \
+        -p 7473:7473 \
+        -v $HOME/neo4j/data:/data \
+        -v $HOME/neo4j/logs:/logs \
+        -v $HOME/neo4j/import:/var/lib/neo4j/import \
+        -v $HOME/neo4j/conf/:/conf/ \
+        neo4j:3.0.6-enterprise
+
+
+
 ```
 
-The application will be accessible at http://46.101.26.198:5000 or if you are using boot2docker then first find ip address using `$ boot2docker ip` and the use the ip `http://<host_ip>:5000`
+The application will be accessible at http://46.101.26.198:7474 or http://46.101.26.198:7687 or http://46.101.26.198:7473 
+7474 for HTTP.
+7473 for HTTPS.
+7687 for Bolt.
 
