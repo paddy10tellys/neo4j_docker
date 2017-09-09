@@ -18,7 +18,8 @@ $ docker run
         -v $HOME/neo4j/import:/var/lib/neo4j/import \
         -v $HOME/neo4j/conf/:/conf/ \
         neo4j:latest
-
+        
+By default, this requires you to login with neo4j/neo4j and change the password. You can, for development purposes, disable authentication by passing --env=NEO4J_AUTH=none to docker run.
 
 ```
 Alternatively, build from remote repo using
