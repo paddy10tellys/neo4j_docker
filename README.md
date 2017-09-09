@@ -32,17 +32,16 @@ Run the Docker container using the command shown below.
 
 ```bash
 
-docker run  
-        -p 7474:7474 \
-        -p 7687:7687 \
-        -p 7473:7473 \
+
+docker run --publish=7474:7474 \
+        --publish=7687:7687 \
+        --publish=7473:7473 \
         -v $HOME/neo4j/data:/data \
         -v $HOME/neo4j/logs:/logs \
         -v $HOME/neo4j/import:/var/lib/neo4j/import \
         -v $HOME/neo4j/conf/:/conf/ \
         neo4j:latest
         <container ID>
-
 
 
 ```
