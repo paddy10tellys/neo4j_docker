@@ -7,6 +7,6 @@ COPY . /blog
 WORKDIR /blog
 RUN pip install py2neo
 RUN pip install -r requirements.txt
-
+ADD app.py /home/pmy/bog/app.py
 ENTRYPOINT ["python"]
 CMD ["app.py"]
