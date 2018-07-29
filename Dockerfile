@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Your Name "paddy10tellys@gmail.com"
 RUN apt-get update
 RUN apt-get install -y python
